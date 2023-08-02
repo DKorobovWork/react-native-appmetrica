@@ -80,6 +80,16 @@ public class AppMetricaModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void reportRevenue(double amount, String serviceName) {
+        Revenue revenue = Revenue.newBuilder(amount, Currency.getInstance("KZT"))
+                .withProductID(serviceName)
+                .withQuantity(1)
+                .withPayload("{\"plus24\":\"Android\"}")
+                .build();
+        YandexMetrica.reportRevenue(revenue);
+    }
+
+    @ReactMethod
     public void reportEvent(String eventName, ReadableMap attributes) {
         if (attributes == null) {
             YandexMetrica.reportEvent(eventName);

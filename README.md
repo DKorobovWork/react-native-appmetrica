@@ -27,7 +27,11 @@ AppMetrica.activate({
 // Sends a custom event message and additional parameters (optional).
 AppMetrica.reportEvent('My event');
 AppMetrica.reportEvent('My event', { foo: 'bar' });
+AppMetrica.reportEvent('My event', { event1: { event2: { event3 : { event4: 'value' } } } });
 
 // Send a custom error event.
 AppMetrica.reportError('My error');
+
+// reportRevenue
+AppMetrica.reportRevenue('500', 'value');
 ```
