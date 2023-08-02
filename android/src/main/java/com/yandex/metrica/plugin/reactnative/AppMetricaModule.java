@@ -18,6 +18,8 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.yandex.metrica.YandexMetrica;
+import com.yandex.metrica.Revenue;
+import java.util.Currency;
 
 public class AppMetricaModule extends ReactContextBaseJavaModule {
 
